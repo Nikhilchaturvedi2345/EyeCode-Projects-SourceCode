@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player</title>
+</head>
+
+<body>
+    <h2>Music Player</h2>
+    <div id="Mp">
+        <div id="Floating-Music">
+            <div id="Upper1" class="FloatingClass">
+                <div class="flip"></div>
+            </div>
+            <div id="Upper2" class="FloatingClass">
+                <div class="flip"></div>
+            </div>
+            <div id="Upper3" class="FloatingClass">
+                <div class="flip"></div>
+            </div>
+            <div id="Upper4" class="FloatingClass">
+                <div class="flip"></div>
+            </div>
+            <div id="Upper5" class="FloatingClass">
+                <div class="flip"></div>
+            </div>
+        </div>
+        <audio id="MusicControler" controls>
+            <source src="music.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <!-- now we are moving towards our javascript  -->
+
+    <script>
+       let MusicControler = document.getElementById("MusicControler");
+       MusicControler.addEventListener("play", function () {
+           let flip = document.getElementsByClassName("flip");
+           for (let i = 0; i < flip.length; i++) {
+             if (flip[i].hasAttribute("id")) {
+                 flip[i].removeAttribute("id");
+             } else {
+                 flip[i].setAttribute("id",`flip${i+1}`);
+             }  
+           }
+       })
+       MusicControler.addEventListener("pause", function () {
+           let flip = document.getElementsByClassName("flip");
+           for (let i = 0; i < flip.length; i++) {
+             if (flip[i].hasAttribute("id")) {
+                 flip[i].removeAttribute("id");
+             } else {
+                 flip[i].setAttribute("id",`flip${i+1}`);
+             }  
+           }
+       })
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
