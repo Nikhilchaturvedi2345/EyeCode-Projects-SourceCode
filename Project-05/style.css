@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#fullbody {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(140deg, rgb(255, 255, 0), rgb(0, 153, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#CalculatorBox {
+    width: 350px;
+    height: 400px;
+    background: rgba(225, 225, 225, 0.25);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+#Rs{
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    height: 25%;
+    width: 94%;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+    box-shadow: inset 20px 10px 10px 5px rgba(225, 225, 225, 0.25),
+    -2px -3px 20px 4px rgba(225, 225, 225, 0.25);
+}
+#ResultValue{
+    height: 100%;
+    width: 100%;
+    font-size: 40px ;
+    background: rgba(0, 0, 0, 0.05);
+    text-align: right;
+    border: none;
+    color: #47543e;
+}
+#ResultValue:focus{
+    border: none;
+    color: black;
+}
+#ButtonBox{
+    min-height: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px;
+}
+.Button{
+    background: rgba(225, 225, 225, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px ;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+}
+.Button:active{
+    box-shadow: inset 2px 1px 10px 1px rgba(0, 0, 0, 0.25);
+    font-size: 13px;
+}
+#btn1,#btn2,#btn3,#btn4,#btn8,#btn12,#btn16,#btn20{
+    background: rgba(225, 225, 225, 0.50);
+}

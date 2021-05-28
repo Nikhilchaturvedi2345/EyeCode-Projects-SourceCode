@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+#main{
+    width: 700px;
+    margin: 40px;
+    position: relative;
+    top: 100px;
+    z-index: 11;
+    color: white;
+    font-family: cursive;
+    font-size: 17px;
+}
+#main h1{
+    padding: 20px 0;
+}
+button{
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 12;
+    background: url("sun.jpg") no-repeat center center/cover;
+    content: '';
+    border: none;
+    box-shadow: 0px 0px 100px 10px rgb(255, 102, 31), 0px 0px 100px 10px white;
+}
+.LightMode{
+    border: 2px solid red;
+    position: absolute;
+    border-radius: 50%;
+    top: 50px;
+    right: 250px;
+    z-index: 3;
+}
+.DarkMode{
+    border: 2px solid red;
+    position: absolute;
+    border-radius: 50%;
+    top: 50px;
+    right: 250px;
+    z-index: 3;
+}
+@keyframes animate {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: 5000px;
+        height: 5000px;
+        transform: scale(5);
+    }
+}

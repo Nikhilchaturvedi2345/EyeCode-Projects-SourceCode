@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project_07 - Dark-Light Mode</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Sun And Moon</h1>
+        <p>
+            First came the red-eyed sun as I did wake;<br>
+            He smote me on the temples and I rose,<br>
+            Casting the night aside and all its woes;<br>
+            And i Would spurn my idelness, ans take<br>
+            My own wild journey even like him ,and shake<br>
+            The pillars of all doubt with lusty blows,<br>
+            Even like himself when his rich glory goes<br>
+            Right through the stalwart fogs that part and break.<br>
+            But ere my soul was ready for the fight,<br>
+            His solemn setting mocked me in the west;<br>
+            And as i trembled in the lifting night,<br>
+            The white moon met me, and my heart confess'd <br>
+            A mellow wisdom in her silent youth,<br>
+            Which fed my hope with fear, and made my strength a truth. <br>
+        </p>
+    </div>
+    <button id="Mode">
+
+    </button>
+</body>
+<script>
+    let Beam = document.createElement("div");
+    let button = document.getElementById("Mode");
+    button.addEventListener("click",function () {
+        if (Beam.className == "LightMode") {
+            Beam.style.animation = "animate 20s linear 1";
+            Beam.style.background = " linear-gradient(357deg,yellow,orange)";
+            Beam.className = "DarkMode";
+            button.style.background = "url('sun.jpg') no-repeat center center/cover";
+            document.body.appendChild(Beam);
+            // setTimeout(() => {
+            //     document.body.removeChild(Beam);
+            //     document.body.style.background = 'linear-gradient(357deg,yellow,orange)';
+            //     button.style.boxShadow = "0px 0px 300px 150px redish"
+            // }, 400);
+
+        }else{
+            Beam.className = "LightMode";
+            Beam.style.animation = "animate 20s linear 1";
+            Beam.style.background = "black";
+            button.style.background = "url('Moon.jpg') no-repeat center center/cover";
+            document.body.appendChild(Beam);
+            button.style.boxShadow = "0px 0px 500px 50px rgb(255,255,210)"
+            // setTimeout(() => {
+            //     document.body.removeChild(Beam);
+            //     document.body.style.background = 'black';
+            // }, 400);
+        }
+        
+    })
+
+
+</script>
+</html>
