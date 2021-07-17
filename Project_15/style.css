@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#circle
+{
+    width: 200px;
+    height: 200px;
+    background: url("logo.png")no-repeat center center/cover;
+    border-radius: 50%;
+    margin: 20px;
+    box-shadow: 2px 2px 10px -1px rgba(0, 0, 0, 0.15),-2px -2px 10px -1px rgba(255, 255, 255, 0.7);
+}
+#MainBox{
+    overflow: hidden;
+    height: 40px;
+    animation: Blink 0.3s linear infinite,Type 5s linear infinite;
+}
+#Box1{
+    width: 220px;
+    height: 30px;
+    font-size: 30px;
+}
+#Box2{
+    font-size: 30px;
+    position: relative;
+    top: -30px;
+    width: 230px;
+    height: 40px;
+    background: #f8f8f8;
+    animation: display 10s linear infinite;
+}
+@keyframes display {
+    25%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+    }
+}
+@keyframes Type {
+    0%,80%,100%{
+        width: 28ch;
+    }
+    50%{
+        width: 0ch;
+    }
+}
+@keyframes Blink {
+    from{
+        border-right: 3px solid black;
+    }
+    to{
+        border-right: none;
+    }
+}

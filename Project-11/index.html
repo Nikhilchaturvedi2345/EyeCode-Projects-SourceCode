@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project_11 - Spinning Newspaper</title>
+</head>
+<body>
+    <div id="fullbody">
+        <div id="box">
+            <h1>Today's Headline</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere earum totam ratione animi blanditiis asperiores!
+                <br>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, rerum?</span>
+                <hr>
+            </p>
+            <button id="Read">
+                Read-More 
+            </button>
+        </div>
+
+        <div id="card" class="Cards">
+            <div id="img"></div>
+            <div id="img2"></div>
+            <div id="img3"></div>
+        </div>
+    </div>
+</body>
+<script>
+    let button = document.getElementById("Read");
+    let Card = document.getElementById("card");
+    let box = document.getElementById("box");
+    let fullbody = document.getElementById("fullbody");
+    button.addEventListener("click", function () {
+        Card.style.display = "block";
+        Card.className = "Cards";
+        box.style.visibility = "hidden";
+        fullbody.style.background = "rgb(227 189 156)";
+    })
+</script>
+</html>

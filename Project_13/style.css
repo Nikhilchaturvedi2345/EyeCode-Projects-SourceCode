@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    /* background: black; */
+}
+span{
+    padding: 0 10px;
+}
+#menu{
+    background: rgb(255, 255, 255,0.8);
+    /* color: rgb(230, 230, 230); */
+    border-radius: 20px;
+    margin: 5px 20px;
+    height: 40px;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+}
+#range{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 230px;
+}

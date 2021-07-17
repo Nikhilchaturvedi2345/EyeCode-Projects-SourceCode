@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project_12 - Card-hover Effect</title>
+</head>
+<body>
+    <div id="card">
+        <div id="FrontBox"></div>
+        <div id="BackBox1" class="BackBox contents">
+            <h1>PUMP UP THE <br>MUSIC</h1>
+        </div>
+        <div id="BackBox2" class="BackBox contents">
+            <p>One-Stop Shop for The Best Headphones</p>
+        </div>
+    </div>
+    <script>
+        let card = document.getElementById("card");
+        let BackBox1 = document.getElementById("BackBox1")
+        let BackBox2 = document.getElementById("BackBox2")
+
+        card.addEventListener("mouseenter", function () {
+            BackBox1.style.cssText = ` animation: animate1 3s linear 1; visibility:visible;`
+            BackBox2.style.cssText = ` animation: animate2 3s linear 1; visibility:visible;`
+        })
+        card.addEventListener("mouseleave",function () {
+            BackBox1.style.cssText = ` animation: Ranimate1 3s linear 1;`
+            BackBox2.style.cssText = ` animation: Ranimate2 3s linear 1; `
+
+        })
+    </script>
+</body>
+</html>
